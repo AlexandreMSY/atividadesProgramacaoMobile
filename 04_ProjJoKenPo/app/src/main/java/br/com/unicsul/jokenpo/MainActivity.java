@@ -46,14 +46,14 @@ public class MainActivity extends AppCompatActivity {
 
         if (this.pontosJogador == 3) {
             System.out.println("Jogador Ganhou");
-            textoResultado.setText("Você ganhou com 3 pontos");
+            textoResultado.setText("Você ganhou com 3 pontos \uD83D\uDE00");
             textoResultado.setTextColor(Color.GREEN);
 
             this.pontosJogador = 0;
             this.pontosComputador = 0;
         } else if (this.pontosComputador == 3) {
             System.out.println("Computador Ganhou");
-            textoResultado.setText("Computador ganhou com 3 pontos");
+            textoResultado.setText("Computador ganhou com 3 pontos \uD83D\uDE2D");
             textoResultado.setTextColor(Color.RED);
 
             this.pontosJogador = 0;
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 (opcaoApp == "papel" && opcaoSelecionada == "pedra") ||
                 (opcaoApp == "pedra" && opcaoSelecionada == "tesoura")
         ) {
-            textoResultado.setText("VOCÊ PERDEU...");
+            textoResultado.setText("VOCÊ PERDEU... \uD83D\uDE2D");
             pontosComputador += 1;
             System.out.println("Comp:" + pontosComputador);
         } else if (
@@ -94,11 +94,11 @@ public class MainActivity extends AppCompatActivity {
                 (opcaoSelecionada == "papel" && opcaoApp == "pedra") ||
                 (opcaoSelecionada == "pedra" && opcaoApp == "tesoura")
         ) {
-            textoResultado.setText("VOCÊ GANHOU...");
+            textoResultado.setText("VOCÊ GANHOU... \uD83D\uDE00");
             pontosJogador += 1;
             System.out.println("Jogador: " + pontosJogador);
         } else {
-            textoResultado.setText("EMPATOU");
+            textoResultado.setText("EMPATOU \uD83E\uDD71");
         }
 
         this.verificarGanhador();
